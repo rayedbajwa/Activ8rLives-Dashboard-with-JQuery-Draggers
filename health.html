@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="format-detection" content="telephone=no">
+    <title>ACTIV8RLIVES!</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+	<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">-->
+
+
+    <style>
+        .clearfix:before, .clearfix:after {
+            content: "";
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+        .clearfix {
+            *zoom:1;
+        }
+        .prettycheckbox, .prettyradio {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+        .prettycheckbox>a, .prettyradio>a {
+            height: 26px;
+            width: 26px;
+            display: block;
+            float: left;
+            cursor: pointer;
+            margin: 0;
+            background: url(img/sprite.png);
+        }
+        .prettycheckbox>a:focus, .prettyradio>a:focus {
+            outline: 0 none;
+        }
+        .prettycheckbox label, .prettyradio label {
+            display: none;
+            float: left;
+            margin: 6px 5px;
+            cursor: pointer;
+        }
+        .prettycheckbox a.disabled, .prettycheckbox label.disabled, .prettyradio a.disabled, .prettyradio label.disabled {
+            cursor: not-allowed;
+        }
+        .prettycheckbox>a {
+            transition: none;
+            background-position: -1px 0;
+        }
+        .prettycheckbox>a:focus {
+            background-position: -1px 0;
+        }
+        .prettycheckbox>a.checked {
+            background-position: -54px 0;
+        }
+        .prettycheckbox>a.checked:focus {
+            background-position: -54px 0;
+        }
+        .prettycheckbox>a.checked.disabled {
+            background-position: -130px 0;
+        }
+        .prettycheckbox>a.disabled {
+            background-position: -104px 0;
+        }
+        .prettyradio>a {
+            background-position: -156px 0;
+        }
+        .prettyradio>a:focus {
+            background-position: -182px 0;
+        }
+        .prettyradio>a.checked {
+            background-position: -208px 0;
+        }
+        .prettyradio>a.checked:focus {
+            background-position: -234px 0;
+        }
+        .prettyradio>a.checked.disabled {
+            background-position: -286px 0;
+        }
+        .prettyradio>a.disabled {
+            background-position: -260px 0;
+        }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .prettycheckbox>a, .prettyradio>a {
+                background: url(img/sprite@2x.png);
+            }
+        }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><span
+                class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <ul class="nav top-nav">
+        <li><a href="account.html"> My Account</a></li>
+        <li><a href="#"> Help</a></li>
+        <li><a href="#"> Logout</a></li>
+    </ul>
+    <div class="collapse navbar-collapse navbar-ex1-collapse" id="mainNav">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html"><i class="menuicon dashboard"></i> Dashboard</a></li>
+           <li class="dropdown"><a href="health.html"  class="dropdown-toggle"><i class="menuicon health "></i>Health Data</a>
+				<!-- role="menu": fix moved by arrows (dropdown) -->
+				<ul class="dropdown-menu" role="menu">
+                                     <li class="divider"></li>
+					<li>
+						<a href="newschart.html">NEWS Cart</a>
+					</li>  
+				</ul>			
+			</li>
+            <li><a href="diary.html"><i class="menuicon fooddiary"></i> Food Diary</a></li>
+            <li><a href="groups.html"><i class="menuicon groups"></i> Groups</a></li>
+            <li><a href="awards.html"><i class="menuicon awards"></i> Awards</a></li>
+            <li><a href="news.html"><i class="menuicon news"></i> News</a></li>
+            <li><a href="#"><i class="menuicon store"></i> Store</a></li>
+        </ul>
+    </div>
+
+    <!--<h1>Good Morning <strong>James</strong></h1>-->
+
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 col-sm-3">
+            <div class="row leftpanel">
+                <div class="col-sm-12">
+                    <h3 class="text-center">At a glance</h3>
+
+                    <div class="spherewrapper">
+
+                        <a href="newschart.html" class="spherebar">View your<br>NEWS chart<span
+                                class="point"></span></a>
+
+                        <div class="sphere">
+                            3
+                        </div>
+
+                        <a href="#" class="spherepop main_pop">?</a>
+
+                    </div>
+
+                    <p class="text-center text-light">
+                        <small>My Health Score<br>
+                            (NEWS*)
+                        </small>
+                    </p>
+                    <div class="statuslist">
+                        <div class="statusbar warning">
+                            <p>Your O<sub>2</sub> levels are a little low</p>
+                            <span class="start"></span> <span class="end"></span>
+                        </div>
+                        <div class="statusbar statistic">
+                            <div class="statlabel">
+                                Heart Rate
+                            </div>
+                            <div class="statvalue">
+                                60
+                                <div class="statunit">
+                                    bpm
+                                </div>
+                            </div>
+                            <img src="img/icons/heart.png" class="staticon" alt="heart rate"/>
+                            <span class="start"></span> <span class="end"></span>
+                        </div>
+                        <div class="statusbar statistic">
+                            <div class="statlabel">
+                                SPO<sup>2</sup>
+                            </div>
+                            <div class="statvalue">
+                                93
+                                <div class="statunit">
+                                    %
+                                </div>
+                            </div>
+                            <img src="img/icons/spo.png" class="staticon" alt="heart rate"/>
+                            <span class="start"></span> <span class="end"></span>
+                        </div>
+                        <div class="statusbar statistic">
+                            <div class="statlabel">
+                                Weight
+                            </div>
+                            <div class="statvalue">
+                                78.5
+                                <div class="statunit">
+                                    kg
+                                </div>
+                            </div>
+                            <img src="img/icons/weight.png" class="staticon" alt="heart rate"/>
+                            <span class="start"></span> <span class="end"></span>
+                        </div>
+
+                        <div class="">
+                            <a href="#" class="earlywarning">
+
+                                <span>View your</span>
+                                National Early<br>
+                                Warning Score<br>
+                                <small>(NEWS)</small>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10 col-sm-9 relative">
+
+            <h1>My <span>Health Data</span></h1>
+
+            <a href="#" class="configuregraphs">Configure Graphs</a>
+
+            <div class="row pageborder">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <div class="arrow_down"><a href="#">Day</a> </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <a href="#" class="blockbutton active">Week</a>
+                        </div>
+                        <div class="col-xs-2">
+                            <a href="#" class="blockbutton">Month</a>
+                        </div>
+                        <div class="col-xs-2">
+                            <a href="#" class="blockbutton">Quarter</a>
+                        </div>
+                        <div class="col-xs-2">
+                            <a href="#" class="blockbutton">Year</a>
+                        </div>
+                        <div class="col-xs-2">
+                            <a href="#" class="blockbutton">All</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="chartwrapper">
+
+                                <div class="chartoptions">
+
+                                    <div class="optioninner">
+                                        <div class="chartoption">
+
+                                            <div class="optionicon"><img src="img/dataicons/steps-small.png" alt=""></div>
+                                            <div class="optionlabel">Steps</div>
+                                            <span class="cbwrapper pink">
+                                            <input type="checkbox" class="prettyCheckable" name="" id="">
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="optioninner">
+                                        <div class="chartoption">
+
+                                            <div class="optionicon"><img src="img/dataicons/weight-small.png" alt=""></div>
+                                            <div class="optionlabel">Weight</div>
+                                            <span class="cbwrapper pink">
+                                            <input type="checkbox" class="prettyCheckable" name="" id="">
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="optioninner">
+                                        <div class="chartoption">
+
+                                            <div class="optionicon"><img src="img/dataicons/bmi-small.png" alt=""></div>
+                                            <div class="optionlabel">BMI</div>
+                                            <span class="cbwrapper pink">
+                                            <input type="checkbox" class="prettyCheckable" name="" id="">
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <h5>Cardio Respiratory</h5>
+
+                                    <div class="optioninner">
+                                        <div class="chartoption pink">
+
+                                            <div class="optionicon"><img src="img/dataicons/pulse-small.png" alt=""></div>
+                                            <div class="optionlabel">Pulse Rate</div>
+                                            <span class="cbwrapper pink">
+                                            <input type="checkbox" class="prettyCheckable" name="" id="">
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <label class="optionsradio">
+                                        <div class="optionicon"><img src="img/dataicons/bloodpreassure-small.png"
+                                                                     alt=""></div>
+                                        <div class="optionlabel double">Systolic Blood Preassue</div>
+                                        <span class="cbwrapper darkblue">
+                                        <input type="checkbox" class="prettyCheckable" name="" id="">
+                                        </span>
+                                    </label>
+                                    <label class="optionsradio">
+                                        <div class="optionicon"><img src="img/dataicons/glucose-small.png" alt=""></div>
+                                        <div class="optionlabel">O<sub>2</sub> Saturation</div>
+                                        <span class="cbwrapper brightblue">
+                                        <input type="checkbox" class="prettyCheckable" name="" id="">
+                                        </span>
+                                    </label>
+                                    <label class="optionsradio">
+                                        <div class="optionicon"><img src="img/dataicons/peakflow-small.png" alt="">
+                                        </div>
+                                        <div class="optionlabel">Peak Flow</div>
+                                        <span class="cbwrapper orange">
+                                        <input type="checkbox" class="prettyCheckable" name="" id="">
+                                        </span>
+                                    </label>
+
+                                </div>
+
+
+                                <div class="largechart" id="healthChart" style="width: 100%; height: 450px;">
+                                </div>
+                                <!--<div class="cbrb">
+                                    <div>
+                                        <input id="checkbox1" type="checkbox" name="checkbox" value="1" checked="checked">
+                                        <label for="checkbox1">Option 1</label>
+                                    </div>
+                                    <div>
+                                        <input id="checkbox2" type="checkbox" name="checkbox" value="2">
+                                        <label for="checkbox2">Option 2</label>
+                                    </div>
+                                    <div>
+                                        <input id="checkbox3" type="checkbox" name="checkbox" value="3">
+                                        <label for="checkbox3">Option 3</label>
+                                    </div>
+                                </div>
+                                <div class="cbrb">
+                                    <div>
+                                        <input id="radio1" type="radio" name="radio" value="1" checked="checked">
+                                        <label for="radio1">Option 1</label>
+                                    </div>
+                                    <div>
+                                        <input id="radio2" type="radio" name="radio" value="2">
+                                        <label for="radio2">Option 2</label>
+                                    </div>
+                                    <div>
+                                        <input id="radio3" type="radio" name="radio" value="3">
+                                        <label for="radio3">Option 3</label>
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id="dashboardelements">
+                                <div class="dashelement chart">
+                                    <p>Muscle Mass
+                                        <small>this week</small>
+                                    </p>
+                                    <span class="spark" id="chart1" sparkLineColor="#a0d897"
+                                          sparkFillColor="#a0d897"></span>
+                                </div>
+                                <div class="dashelement chart">
+                                    <p>Muscle Mass
+                                        <small>this week</small>
+                                    </p>
+                                    <span class="spark" id="chart2" sparkLineColor="#a0d897"
+                                          sparkFillColor="#a0d897"></span>
+                                </div>
+                                <div class="dashelement chart">
+                                    <p>Muscle Mass
+                                        <small>this week</small>
+                                    </p>
+                                    <span class="spark" id="chart3" sparkLineColor="#a0d897"
+                                          sparkFillColor="#a0d897"></span>
+                                </div>
+                                <div class="dashelement chart">
+                                    <p>Muscle Mass
+                                        <small>this week</small>
+                                    </p>
+                                    <span class="spark" id="chart4" sparkLineColor="#a0d897"
+                                          sparkFillColor="#a0d897"></span>
+                                </div>
+                                <div class="dashelement chart">
+                                    <p>Muscle Mass
+                                        <small>this week</small>
+                                    </p>
+                                    <span class="spark" id="chart5" sparkLineColor="#a0d897"
+                                          sparkFillColor="#a0d897"></span>
+                                </div>
+                                <div class="dashelement chart">
+                                    <p>Muscle Mass
+                                        <small>this week</small>
+                                    </p>
+                                    <span class="spark" id="chart6" sparkLineColor="#a0d897"
+                                          sparkFillColor="#a0d897"></span>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <img src="img/dataicons/steps-small.png">
+                                    <h4>Steps</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <img src="img/dataicons/weight-small.png">
+                                    <h4>Weight</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <img src="img/dataicons/bmi-small.png">
+                                    <h4>BMI</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <img src="img/dataicons/weight-small.png">
+                                    <h4>Body Fat</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <img src="img/dataicons/weight-small.png">
+                                    <h4>Bone Mass</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <img src="img/dataicons/weight-small.png">
+                                    <h4>Muscle Mass</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <img src="img/dataicons/weight-small.png">
+                                    <h4>Viceral Fat</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <img src="img/dataicons/peakflow-small.png">
+                                    <h4>Peak Flow</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <img src="img/dataicons/peakflow-small.png">
+                                    <h4>FEV<sub>1</sub></h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <img src="img/dataicons/glucose-small.png">
+                                    <h4>Oxygen Saturation</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>Pulse Rate</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>Systolic Blood Preassure</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>Blood Glucose</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>Wellness</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>Cough</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>Blood Chlesterol</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>C-Reactive protein</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>International Normalised Ratio</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>P. aeruginosa Biomarker 1</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>P. aeruginosa Biomarker 2</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>Waist-hip Ratio</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>Neck Size</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>Temperature</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>ELEMENT</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>ELEMENT</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>ELEMENT</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>ELEMENT</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>ELEMENT</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>ELEMENT</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>ELEMENT</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>ELEMENT</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>ELEMENT</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>ELEMENT</h4>
+                                </div>
+                                <div class="dashelement healthoption">
+                                    <h4>ELEMENT</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid info">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>Terms &amp; Conditions of use</p>
+
+                                <p>Activ8rlives and Activ8rlives.com are trade marks of Aseptika Ltd. All rights
+                                    reserved 2015. Company: Aseptika Ltd, 14 Elizabeth Drive, Hartford, Huntingdon,
+                                    Cambridgeshire PE29 1WA. United Kingdom.</p>
+
+                                <p>T: +44 (0) 1480 352 821 E: info@activ8rlives.com Company number: Registration Number:
+                                    GB06425174. VAT Registration: 985 5533 73.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<!--<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>-->
+<script src="js/jquery-ui.js">
+<script src="js/query.ui.touch-punch.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-submenu.min.js" defer></script>
+
+<script src="js/jquery.isotope.js"></script>
+<script src="js/isotope.center.js"></script>
+
+<script src="js/sparklines.js"></script>
+<script src="js/flot/jquery.flot.min.js"></script>
+<script src="js/flot/jquery.flot.bar.order.min.js"></script>
+<script src="js/flot/jquery.flot.pie.min.js"></script>
+<script src="js/flot/jquery.flot.resize.min.js"></script>
+
+<script>
+
+    function showTooltip(x, y, contents) {
+        $('<div id="tooltip" class="flot-tooltip tooltip"><div class="tooltip-arrow"></div>' + contents + '</div>').css({
+            top: y - 43,
+            left: x - 15,
+        }).appendTo("body").fadeIn(200);
+    }
+
+    $(function () {
+
+        $('#chart1').sparkline([60, 70, 80, 85, 80, 85, 95], {
+            width: '100%',
+            height: '80px',
+            chartRangeMin: 40,
+            chartRangeMax: 120,
+            enableTagOptions: true
+        });
+
+        $('#chart2').sparkline([80, 70, 80, 75, 80, 75, 65], {
+            width: '100%',
+            height: '80px',
+            chartRangeMin: 40,
+            chartRangeMax: 120,
+            enableTagOptions: true
+        });
+
+        $('#chart3').sparkline([90, 80, 70, 70, 70, 65, 50], {
+            width: '100%',
+            height: '80px',
+            chartRangeMin: 40,
+            chartRangeMax: 120,
+            enableTagOptions: true
+        });
+
+        $('#chart4').sparkline([60, 70, 80, 85, 80, 85, 95], {
+            width: '100%',
+            height: '80px',
+            chartRangeMin: 40,
+            chartRangeMax: 120,
+            enableTagOptions: true
+        });
+
+        $('#chart5').sparkline([60, 80, 100, 80, 80, 85, 95], {
+            width: '100%',
+            height: '80px',
+            chartRangeMin: 40,
+            chartRangeMax: 120,
+            enableTagOptions: true
+        });
+
+        $('#chart6').sparkline([60, 70, 80, 85, 80, 85, 95], {
+            width: '100%',
+            height: '80px',
+            chartRangeMin: 40,
+            chartRangeMax: 120,
+            enableTagOptions: true
+        });
+
+        var data = [[1262304000000, 1300], [1264982400000, 2200], [1267401600000, 3600], [1270080000000, 5200], [1272672000000, 4500], [1275350400000, 3900], [1277942400000, 3600], [1280620800000, 4600], [1283299200000, 5300], [1285891200000, 7100], [1288569600000, 7800], [1291241700000, 8195]];
+
+        $.plot($("#healthChart"), [{
+            label: "Steps",
+            data: data,
+            color: "#3a8ce5"
+        }], {
+            xaxis: {
+                min: (new Date(2009, 12, 1)).getTime(),
+                max: (new Date(2010, 11, 2)).getTime(),
+                mode: "time",
+                tickSize: [1, "month"],
+                monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            },
+            series: {
+                lines: {
+                    show: true,
+                    fill: false
+                },
+                points: {
+                    show: true,
+                }
+            },
+            grid: {hoverable: true, clickable: true},
+            legend: {
+                show: false
+            }
+        });
+
+        $("#healthChart").bind("plothover", function (event, pos, item) {
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+                    previousPoint = item.dataIndex;
+
+                    $("#tooltip").remove();
+                    var y = item.datapoint[1].toFixed();
+
+                    showTooltip(item.pageX, item.pageY,
+                            item.series.label + " = " + y);
+                }
+            }
+            else {
+                $("#tooltip").remove();
+                previousPoint = null;
+            }
+        });
+
+    });
+
+</script>
+
+<script type="text/javascript" src="js/prettyCheckable.min.js"></script>
+
+<script type="text/javascript">
+    $().ready(function(){
+        $('.prettyCheckable').each(function(){
+            $(this).prettyCheckable();
+        });
+    });
+</script>
+
+<script>
+
+</script>
+<div class="newspopup popups" id="popup">
+		<a href="" class="closelink"></a>
+		<div class="popupcontent">
+			<article id="news">
+				<label class="popup-label margintop50px">National Early
+					Warning Score (NEWS)</label>
+				<p>
+					<strong>Standardising the assessment of acute-illness
+						severity in the NHS</strong>
+				</p>
+				<section>
+					<p>
+						The NEWS, like many existing EWS systems, is based on a simple
+						scoring system in which a score is allocated to physiological
+						measurements already undertaken when patients present to, or are
+						being monitored in hospital. <br>Six simple physiological
+						parameters form the basis of the scoring system:
+					</p>
+					<ol class="lower_roman_list">
+						<li>Respiratory rate</li>
+						<li>Oxygen saturations</li>
+						<li>Temperature</li>
+						<li>Systolic blood pressure</li>
+						<li>Pulse rate</li>
+						<li>Level of consciousness</li>
+					</ol>
+					<p>A score is allocated to each as they are measured, the
+						magnitude of the score reflecting how extreme the parameter varies
+						from the norm. The score is then aggregated. The score is uplifted
+						for people requiring oxygen. It is important to emphasise that
+						these parameters are already routinely measured in hospitals and
+						recorded on the clinical chart.</p>
+				</section>
+				<section id="news_table">
+					<table id="header_table">
+						<thead>
+							<tr>
+								<th>Physiological Parameters</th>
+								<th>3</th>
+								<th>2</th>
+								<th>1</th>
+								<th>0</th>
+								<th>1</th>
+								<th>2</th>
+								<th>3</th>
+							</tr>
+						</thead>
+					</table>
+					<table id="news_data_table">
+						<tbody>
+							<tr>
+								<td>Respiration Rate</td>
+								<td>&le;8</td>
+								<td></td>
+								<td>9-11</td>
+								<td>12-20</td>
+								<td></td>
+								<td>21-24</td>
+								<td>&ge;25</td>
+							</tr>
+							<tr>
+								<td>Oxygen Saturations</td>
+								<td>&le;91</td>
+								<td>92-93</td>
+								<td>94-95</td>
+								<td>&ge;96</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Any Supplemental Oxygen</td>
+								<td></td>
+								<td>Yes</td>
+								<td></td>
+								<td>No</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Temperature</td>
+								<td>&le;35</td>
+								<td></td>
+								<td>35.1-36.0</td>
+								<td>36.1-38.0</td>
+								<td>38.1-39.0</td>
+								<td>&ge;39.1</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Systolic Blood Pressure</td>
+								<td>&le;90</td>
+								<td>19-100</td>
+								<td>101-110</td>
+								<td>111-219</td>
+								<td></td>
+								<td></td>
+								<td>&ge;220</td>
+							</tr>
+							<tr>
+								<td>Heart Rate</td>
+								<td>&le;40</td>
+								<td></td>
+								<td>41-50</td>
+								<td>51-90</td>
+								<td>91-110</td>
+								<td>111-130</td>
+								<td>&ge;131</td>
+							</tr>
+							<tr>
+								<td>Level Of Consciousness</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>A</td>
+								<td></td>
+								<td></td>
+								<td>V, P or U</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</article>
+
+			<article id="news_threshold">
+				<label class="popup-label margintop50px">NEWS Thresholds and
+					triggers</label>
+				<section>
+					<table id="header_table">
+						<thead>
+							<tr>
+								<th>NEWS Scores</th>
+								<th>Clinical Risk</th>
+							</tr>
+						</thead>
+					</table>
+					<table id="data_table">
+						<tbody>
+							<tr>
+								<td>
+									<div class="newsthreshold_subdiv">0</div>
+									<div class="newsthreshold_subdiv col_green">Aggregate 1 -
+										4</div>
+								</td>
+								<td class="col_green">Low</td>
+							</tr>
+							<tr class="col_yellow">
+								<td><span class="font_color_ff0000">RED Score*<br>
+									<small>(Individual parameter scoring 3)</small></span><br>Aggregate
+									5 - 6</td>
+								<td>Medium</td>
+							</tr>
+							<tr class="col_pink">
+								<td>Aggregate 7 or more</td>
+								<td>High</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section class="margintop50px">
+					<p>
+						<strong>The NEWS trigger system aligned to the scale of
+							clinical risk</strong>
+					</p>
+					<p>
+						*<span class="font_color_ff0000" style="font-weight: 700">RED
+							score </span>refers to an extreme variation in a single physiological
+						parameter (ie a score of 3 on the NEWS chart, coloured RED to aid
+						identification and represents an extreme variation in a single
+						physiological parameter). The consensus of the NEWS Development
+						and Implementation Group (NEWSDIG) was that extreme values in one
+						physiological parameter (eg heart rate ≤40 beats per minute, or a
+						respiratory rate of ≤8 per minute or a temperature of ≤35°C) could
+						not be ignored and on its own required urgent clinical evaluation.
+					</p>
+					<p>Reproducing this chart: please note that this chart must be
+						reproduced in colour, and should not be modified or amended.</p>
+					<p>The NEWS initiative: the NEWS initiative flowed from the
+						Royal College of Physicians’ NEWSDIG report, and was jointly
+						developed and funded in collaboration with the Royal College of
+						Physicians, Royal College of Nursing, National Outreach Forum and
+						NHS Training for Innovation.</p>
+					<p>© Royal College of Physicians 2012</p>
+				</section>
+			</article>
+		</div>
+	</div>
+</body>
+<style>
+    #popup{
+        display:none;
+        
+    }
+    </style>
+<script src="js/jquery.popupoverlay.js"></script>
+        <script type="text/javascript" src="js/chart_sct.js"></script>
+	<script src="js/script_sct.js"></script>
+</html>

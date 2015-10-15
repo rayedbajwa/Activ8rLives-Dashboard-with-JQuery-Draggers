@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="format-detection" content="telephone=no">
+<title>ACTIV8RLIVES!</title>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/sb-admin.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+		<a class="navbar-brand" href="index.html"></a>
+	</div>
+	<ul class="nav top-nav">
+		<li> <a href="account.html" class="dropdown-toggle" data-toggle="dropdown"> My Account</a> </li>
+		<li> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Help</a> </li>
+		<li> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Logout</a> </li>
+	</ul>
+	<div class="collapse navbar-collapse navbar-ex1-collapse" id="mainNav">
+		<ul class="nav navbar-nav">
+			<li> <a href="index.html"><i class="menuicon dashboard"></i> Dashboard</a> </li>
+			<li class="dropdown"><a href="health.html"  class="dropdown-toggle"><i class="menuicon health "></i>Health Data</a>
+				<!-- role="menu": fix moved by arrows (dropdown) -->
+				<ul class="dropdown-menu" role="menu">
+                                     <li class="divider"></li>
+					<li>
+						<a href="newschart.html">NEWS Cart</a>
+					</li>  
+				</ul>			
+			</li>
+			<li> <a href="diary.html"><i class="menuicon fooddiary"></i> Food Diary</a> </li>
+			<li> <a href="groups.html"><i class="menuicon groups"></i> Groups</a> </li>
+			<li> <a href="awards.html"><i class="menuicon awards"></i> Awards</a> </li>
+			<li> <a href="news.html"><i class="menuicon news"></i> News</a> </li>
+			<li> <a href="#"><i class="menuicon store"></i> Store</a> </li>
+		</ul>
+	</div>
+	
+	<!--<h1>Good Morning <strong>James</strong></h1>--> 
+	
+</nav>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2 col-sm-3">
+			<div class="row leftpanel">
+				<div class="col-sm-12">
+					<h3 class="text-center">Your Profile</h3>
+					<div class="statuslist">
+						<div class="statusbar profile">
+							<img src="img/img-profile.jpg" class="profileimg" alt="profile image">
+							<p><a href="#">Change profile picture</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-10 col-sm-9">
+		
+			<h1>My <span>Account</span></h1>
+			
+			<div class="row pageborder">
+				<div class="col-sm-12">
+			
+			<ul class="nav nav-tabs" role="tablist" id="myTab">
+				<li role="presentation" class="active"><a href="#personnal" aria-controls="personnal" role="tab" data-toggle="tab">Personnal details</a></li>
+				<li role="presentation"><a href="#passwords" aria-controls="passwords" role="tab" data-toggle="tab">Passwords &amp; logins</a></li>
+				<li role="presentation"><a href="#targets" aria-controls="targets" role="tab" data-toggle="tab">Your targets</a></li>
+				<li role="presentation"><a href="#privacy" aria-controls="privacy" role="tab" data-toggle="tab">Privacy &amp; emails</a></li>
+				<li role="presentation"><a href="#trackers" aria-controls="trackers" role="tab" data-toggle="tab">Custom trackers</a></li>
+				<li role="presentation"><a href="#biomarkers" aria-controls="biomarkers" role="tab" data-toggle="tab">Biomarkers</a></li>
+			</ul>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="personnal">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-2 control-label">Display Name</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Display Name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-2 control-label">Date of Birth</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Date of Birth">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Gender</label>
+							<div class="col-sm-10">
+								<div class="radio-inline">
+									<label>
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+										Male </label>
+								</div>
+								<div class="radio-inline">
+									<label>
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+										Female </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Measurement</label>
+							<div class="col-sm-10">
+								<div class="radio-inline">
+									<label>
+										<input type="radio" name="optionsRadios1" id="optionsRadios11" value="option11" checked>
+										Metric </label>
+								</div>
+								<div class="radio-inline">
+									<label>
+										<input type="radio" name="optionsRadios1" id="optionsRadios12" value="option12">
+										Imperial </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Weight <small>(kg)</small></label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Weight">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Height <small>(cm)</small></label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Height">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Stride Length <small>(cm)</small></label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" placeholder="Length">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<p>
+								<button type="submit" class="btn btn-default">Update</button>
+								or <a href="#">Cancel and exit</a></p>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="passwords">
+					<h2>Passwords</h2>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="targets">
+					<h2>Targets</h2>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="privacy">
+					<h2>Privacy</h2>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="trackers">
+					<h2>Trackers</h2>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="biomarkers">
+					<h2>Biomarkers</h2>
+				</div>
+			</div>
+			<div class="container-fluid info">
+				<div class="row">
+					<div class="col-xs-12">
+						<p>Terms &amp; Conditions of use</p>
+						<p>Activ8rlives and Activ8rlives.com are trade marks of Aseptika Ltd. All rights reserved 2015. Company: Aseptika Ltd, 14 Elizabeth Drive, Hartford, Huntingdon, Cambridgeshire PE29 1WA. United Kingdom.</p>
+						<p>T: +44 (0) 1480 352 821 E: info@activ8rlives.com Company number: Registration Number: GB06425174. VAT Registration: 985 5533 73.</p>
+					</div>
+				</div>
+			</div></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.isotope.js"></script> 
+<!--<script src="js/isotope.center.js"></script> --> 
+<script src="js/canvasmask.js"></script> 
+<script src="js/script.js"></script>
+</body>
+</html>

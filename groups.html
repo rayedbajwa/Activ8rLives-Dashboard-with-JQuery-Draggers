@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="format-detection" content="telephone=no">
+<title>ACTIV8RLIVES!</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/sb-admin.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+		<a class="navbar-brand" href="index.html"></a>
+	</div>
+	<ul class="nav top-nav">
+		<li> <a href="account.html"> My Account</a> </li>
+		<li> <a href="#"> Help</a> </li>
+		<li> <a href="#"> Logout</a> </li>
+	</ul>
+	<div class="collapse navbar-collapse navbar-ex1-collapse" id="mainNav">
+		<ul class="nav navbar-nav">
+			<li> <a href="index.html"><i class="menuicon dashboard"></i> Dashboard</a> </li>
+			<li class="dropdown"><a href="health.html"  class="dropdown-toggle"><i class="menuicon health "></i>Health Data</a>
+				<!-- role="menu": fix moved by arrows (dropdown) -->
+				<ul class="dropdown-menu" role="menu">
+                                     <li class="divider"></li>
+					<li>
+						<a href="newschart.html">NEWS Cart</a>
+					</li>  
+				</ul>			
+			</li>
+			<li> <a href="diary.html"><i class="menuicon fooddiary"></i> Food Diary</a> </li>
+			<li class="active"> <a href="groups.html"><i class="menuicon groups"></i> Groups</a> </li>
+			<li> <a href="awards.html"><i class="menuicon awards"></i> Awards</a> </li>
+			<li> <a href="news.html"><i class="menuicon news"></i> News</a> </li>
+			<li> <a href="#"><i class="menuicon store"></i> Store</a> </li>
+		</ul>
+	</div>
+	
+	<!--<h1>Good Morning <strong>James</strong></h1>--> 
+	
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2 col-sm-3">
+			<div class="row leftpanel">
+				<div class="col-sm-12">
+					<h3 class="text-center">Your Profile</h3>
+					<div class="statuslist">
+						<div class="statusbar profile">
+							<img src="img/img-profile.jpg" class="profileimg" alt="profile image">
+							<h4 class="purpletext">James</h4>
+							<p><a href="#">Change profile picture</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-10 col-sm-9">
+		
+				<h1>My <span>Groups</span></h1>
+				
+				<div class="row pageborder">
+					<div class="col-sm-2">
+						<form action="" class="groupform">
+							<label>Group type:</label>
+							<select name="" id="">
+								<option>Show all</option>
+								<option>Groups I've created</option>
+								<option>Groups I've subscribed to</option>
+							</select>
+						</form>
+						<h4 class="bluetext">View the groups you are affiliated with</h4>
+						<p>Use the drop down box above to change which type of groups are listed below. If you a not a member of any groups yet then use our search function on the left to find groups which interest you or why not create a group yourself and invite friends to join you!</p>
+					</div>
+					<div class="col-sm-10">
+						<ul class="nav nav-tabs" role="tablist" id="myTab">
+							<li role="presentation" class="active"><a href="#grouplisting" aria-controls="grouplisting" role="tab" data-toggle="tab">Group listing</a></li>
+							<li role="presentation"><a href="#creategroup" aria-controls="creategroup" role="tab" data-toggle="tab">Create group</a></li>
+							<li role="presentation"><a href="#invitations" aria-controls="invitations" role="tab" data-toggle="tab">Invitations (0)</a></li>
+							<li role="presentation"><a href="#requests" aria-controls="requests" role="tab" data-toggle="tab">Requests (0)</a></li>
+							<li class="barsearch">
+								<form>
+									<label>Search groups</label>
+									<input type="text">
+									<button>GO</button>
+								</form>
+							</li>
+						</ul>
+						<div class="tab-content nopad">
+							<div role="tabpanel" class="tab-pane nopad active" id="grouplisting">
+								<h2 class="blue">Groups which you've created and administer </h2>
+								<div class="padcontent">
+									<p>You do not currently have any groups listed under this category</p>
+									<p>Click <a href="#">here</a> to search groups or create a new group <a href="#">here</a></p>
+								</div>
+								<h2 class="purple">Groups which you've joined and subscribe to</h2>
+								<div class="grouplist">
+									<div class="groupitem">
+										<img src="img/img-group.jpg" alt="group image">
+										<h4>Activ8rlives A8 group <span>273 members</span></h4>
+										<p>Demonstration group and support forum</p>
+										<p>Created by <a href="#">Kevo1234</a> </p>
+										<a href="#" class="btn-view">Click to view</a>
+									</div>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="creategroup">
+								<h2>Create Group</h2>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="invitations">
+								<h2>Invitations</h2>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="requests">
+								<h2>Requests</h2>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-xs-12">
+				<div class="container-fluid info">
+					<div class="row">
+						<div class="col-xs-12">
+							<p>Terms &amp; Conditions of use</p>
+							<p>Activ8rlives and Activ8rlives.com are trade marks of Aseptika Ltd. All rights reserved 2015. Company: Aseptika Ltd, 14 Elizabeth Drive, Hartford, Huntingdon, Cambridgeshire PE29 1WA. United Kingdom.</p>
+							<p>T: +44 (0) 1480 352 821 E: info@activ8rlives.com Company number: Registration Number: GB06425174. VAT Registration: 985 5533 73.</p>
+						</div>
+					</div>
+				</div>
+					
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.isotope.js"></script> 
+<!--<script src="js/isotope.center.js"></script> --> 
+<script src="js/canvasmask.js"></script> 
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="format-detection" content="telephone=no">
+    <title>ACTIV8RLIVES!</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/sb-admin.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link href="css/styles_sct.css" rel="stylesheet">
+ 
+    <link href="css/jquery-ui.css" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">-->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<nav class="navbar" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><span
+                class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <ul class="nav top-nav">
+        <li><a href="account.html"> My Account</a></li>
+        <li><a href="#"> Help</a></li>
+        <li><a href="#"> Logout</a></li>
+    </ul>
+    <div class="collapse navbar-collapse navbar-ex1-collapse" id="mainNav">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html"><i class="menuicon dashboard"></i> Dashboard</a></li>
+            <li class="dropdown"><a href="health.html"  class="dropdown-toggle"><i class="menuicon health "></i>Health Data</a>
+				<!-- role="menu": fix moved by arrows (dropdown) -->
+				<ul class="dropdown-menu" role="menu">
+                                     <li class="divider"></li>
+					<li>
+						<a href="newschart.html">NEWS Cart</a>
+					</li>  
+				</ul>			
+			</li>
+            <li><a href="diary.html"><i class="menuicon fooddiary"></i> Food Diary</a></li>
+            <li><a href="groups.html"><i class="menuicon groups"></i> Groups</a></li>
+            <li><a href="awards.html"><i class="menuicon awards"></i> Awards</a></li>
+            <li><a href="news.html"><i class="menuicon news"></i> News</a></li>
+            <li><a href="#"><i class="menuicon store"></i> Store</a></li>
+                               
+        </ul>
+    </div>
+
+    <!--<h1>Good Morning <strong>James</strong></h1>-->
+
+</nav>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-3 col-md-2">&nbsp;</div>
+        <div class="col-sm-9 col-md-10">
+            <h1>Good Morning <span>James</span>
+
+                <div class="headerbtns">
+                    <a href="#" class="headerbtn helpbtn"><span></span>Dashboard Help</a> <a
+                        href="#" class="headerbtn configurebtn"><span></span>Configure Dashboard</a></div>
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2 col-sm-3">
+            <div class="row leftpanel home">
+                <div class="col-sm-12">
+                    <h3 class="text-center">At a glance</h3>
+
+                    <p class="text-center">
+                        <small>My Health Score<br>
+                            (NEWS*)
+                        </small>
+                    </p>
+
+                    <div class="spherewrapper">
+
+                        <a href="newschart.html" class="spherebar">View your<br>NEWS chart<span
+                                class="point"></span></a>
+
+                        <div class="sphere ">
+                            3
+                        </div>
+
+                        <a href="#" class="spherepop main_pop">?</a>
+
+                    </div>
+
+                    <p class="text-center">Your oxygen saturation is a little low</p>
+
+                    <div class="statuslist">
+                        <div class="statusbar warning">
+                            <p>Your O<sub>2</sub> levels are a little low</p>
+                            <span class="start"></span> <span class="end"></span>
+                        </div>
+                        <div class="statusbar green green statistic">
+                            <div class="statlabel">
+                                Heart Rate
+                            </div>
+                            <div class="statvalue">
+                                60
+                                <div class="statunit">
+                                    bpm
+                                </div>
+                            </div>
+                            <img src="img/statusbar/dashboard-07.png" class="staticon" alt="heart rate"/>
+                            <span class="start"></span> <span class="end"></span>
+                        </div>
+                        <div class="statusbar orange statistic">
+                            <div class="statlabel">
+                                SPO<sup>2</sup>
+                            </div>
+                            <div class="statvalue">
+                                93
+                                <div class="statunit">
+                                    %
+                                </div>
+                            </div>
+                            <img src="img/statusbar/dashboard-08.png" class="staticon" alt="heart rate"/>
+                            <span class="start"></span> <span class="end"></span>
+                        </div>
+                        <div class="statusbar green statistic">
+                            <div class="statlabel">
+                                Weight
+                            </div>
+                            <div class="statvalue">
+                                78.5
+                                <div class="statunit">
+                                    kg
+                                </div>
+                            </div>
+                            <img src="img/statusbar/dashboard-09.png" class="staticon" alt="heart rate"/>
+                            <span class="start"></span> <span class="end"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10 col-sm-9">
+
+
+            <div class="row pageborder">
+                <div class="col-xs-12">
+
+
+                    <form id="dashboardconfigform">
+                    <div class="formsteps">
+                        <ul>
+                            <li class="active">
+                                <div class="content">
+                                    <span class="hand"></span>
+                                    <label>Widget type</label>
+                                    <select>
+                                        <option>Data - Graph</option>
+                                        <option>Data - Text</option>
+                                        <option>Questions</option>
+                                    </select>
+                                    <span class="point"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <label>Widget content</label>
+                                    <select>
+                                        <option>Steps</option>
+                                        <option>Weight</option>
+                                        <option>BMI</option>
+                                    </select>
+                                    <span class="tailtop"></span>
+                                    <span class="tailbottom"></span>
+                                    <span class="point"></span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="content">
+                                    <label>Widget size</label>
+                                    <select>
+                                        <option>4 wide 2 high</option>
+                                        <option>4 wide 2 high</option>
+                                        <option>4 wide 2 high</option>
+                                    </select>
+                                    <span class="tailtop"></span>
+                                    <span class="tailbottom"></span>
+                                    <span class="point"></span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="content">
+                                    <button><span></span>Add widget</button>
+                                    <span class="tailtop"></span>
+                                    <span class="tailbottom"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                    </form>
+
+                    <div id="dashboardelements" class="packery">
+                        <div class="dashelement item wider tall question white">
+
+
+                            <div class="elementoptions">
+                                <ul>
+                                    <li><a href="#" class="configurebtn"></a></li>
+                                    <li><a href="#" class="movebtn"></a></li>
+                                    <li><a href="#" class="removebtn"></a></li>
+                                </ul>
+                                <div class="elementdata">
+                                    <p>Widget Type:</p>
+
+                                    <p>2x2 - Widget Name</p>
+                                </div>
+                            </div>
+
+
+                            <a href="#" class="dontask">Dont ask me this again <span></span></a>
+
+                            <h4>How are you feeling today</h4>
+
+                            <div class="questionsliderwrapper">
+                                <div class="selectionlist">
+                                    <div class="selection">
+                                        <img src="img/question-sad.png" alt="sad">
+                                    </div>
+                                    <div class="selection">
+                                        <img src="img/question-ok.png" alt="ok">
+                                    </div>
+                                    <div class="selection">
+                                        <img src="img/question-happy.png" alt="happy">
+                                    </div>
+                                </div>
+                                <div class="questionslider">
+
+                                    <div id="slider"></div>
+
+                                </div>
+
+                                <div class="questionlist">
+                                    <div class="questionnumbers">
+                                        <ul>
+                                            <li><a class="questionlink" href="">1</a></li>
+                                            <li><a class="questionlink" href="">2</a></li>
+                                            <li><a class="questionlink" href="">3</a></li>
+                                            <li><a class="questionlink" href="">4</a></li>
+                                            <li><a class="questionlink" href="">5</a></li>
+                                            <li><a class="questionlink active" href="">6</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="point"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="dashelement item wider tall information">
+
+                            <div class="elementoptions">
+                                <ul>
+                                    <li><a href="#" class="configurebtn"></a></li>
+                                    <li><a href="#" class="movebtn"></a></li>
+                                    <li><a href="#" class="removebtn"></a></li>
+                                </ul>
+                                <div class="elementdata">
+                                    <p>Widget Type:</p>
+
+                                    <p>2x2 - Widget Name</p>
+                                </div>
+                            </div>
+
+                            <h4><span class="importanticon"></span> Information</h4>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum facilis ipsum
+                                temporibus tenetur ullam vitae voluptate. Aliquam corporis, cupiditate esse laborum
+                                mollitia nisi qui totam vel velit vero. Impedit, saepe.</p>
+
+                            <a href="#" class="closebtn"><span class="icon"></span> Close</a>
+
+
+                        </div>
+                        <div class="dashelement  item wide tall graph white">
+                            <h4>Steps this week</h4>
+                            <!--<img src="img/img-graph-example.png" alt="example graph">-->
+
+                            <div class="largechart" id="healthChart" style="width: 100%; height: 200px;"></div>
+
+                        </div>
+                        <div class="dashelement item">
+
+                            <div class="elementoptions">
+                                <ul>
+                                    <li><a href="#" class="configurebtn"></a></li>
+                                    <li><a href="#" class="movebtn"></a></li>
+                                    <li><a href="#" class="removebtn"></a></li>
+                                </ul>
+                                <div class="elementdata">
+                                    <p>Widget Type:</p>
+
+                                    <p>2x2 - Widget Name</p>
+                                </div>
+                            </div>
+
+                            <h4>ELEMENT</h4>
+
+                        </div>
+                        <div class="dashelement item wide tall didyouknow">
+                            <img src="img/img-didyouknow.png" alt=""/>
+
+                            <h3>Did you know...?</h3>
+
+                            <p>The places you predominantly store fat and the places you lose it from first are largely
+                                determined by your gender (women tend to store it around their hips, bottom and thighs,
+                                men around their abdomen) and your genes – so choose your parents wisely! </p>
+                        </div>
+                        <div class="dashelement item  wide tall feet">
+                            <h4>Steps today</h4>
+
+                            <div class="footsteps">
+                                <img src="img/FeetHole.png" alt="70% of target">
+
+                                <div class="barsurround">
+                                    <div class="baramount"></div>
+                                </div>
+                            </div>
+
+                            <p><span>6,254</span>steps so far today</p>
+                        </div>
+
+
+                        <div class="dashelement item feetsmall">
+
+                            <div class="footsteps">
+                                <img src="img/FeetHoleSmall.png" alt="70% of target">
+
+                                <div class="barsurround">
+                                    <div class="baramount"></div>
+                                </div>
+                            </div>
+
+
+                            <!--<img src="img/img-feet-70.png" alt="70% of target">-->
+
+
+                            <p><span>6,254</span>steps so far today</p>
+                        </div>
+
+
+                        <div class="dashelement item ">
+                            ELEMENT
+                        </div>
+                        <div class=" dashelement item  tall slim statuslist">
+                            <div class="statusbar warning">
+                                <p class="small">Your O<sup>2</sup> levels are a little low</p>
+                                <span class="start"></span> <span class="end"></span>
+                            </div>
+                            <div class="statusbar warning">
+                                <p class="small">Your O<sup>2</sup> levels are a little low</p>
+                                <span class="start"></span> <span class="end"></span>
+                            </div>
+                            <div class="statusbar warning">
+                                <p class="small">Your O<sup>2</sup> levels are a little low</p>
+                                <span class="start"></span> <span class="end"></span>
+                            </div>
+                        </div>
+                        <div class="dashelement item stat stat-green">
+                           <!-- <img src="img/element-ok.png"> -->
+                            <h4>Weight</h4>
+                            <h4>0.5
+                                <small>kg</small>
+                            </h4>
+                            <div class="message">
+                                Loss this week
+                            </div>
+                        </div>
+                        <div class="dashelement item stat stat-red">
+                            <!--  <img src="img/element-fatal.png">-->
+                            <h4>Weight</h4>
+                            <h4>1.5
+                                <small>kg</small>
+                            </h4>
+                            <div class="message">
+                                Loss this week
+                            </div>
+                        </div>
+                        <div class="dashelement item stat stat-brown">
+                            <!--    <img src="img/element-warning .png">-->
+                            <h4>Weight</h4>
+                            <h4>0.0
+                                <small>kg</small>
+                            </h4>
+                            <div class="message">
+                                Loss this week
+                            </div>
+                        </div>
+                        <div class="dashelement item">
+                            ELEMENT
+                        </div>
+                        <div class="dashelement item">
+                            ELEMENT
+                        </div>
+                        <div class="dashelement item">
+                            ELEMENT
+                        </div>
+                        <div class="dashelement item">
+                            ELEMENT
+                        </div>
+                        <div class=" dashelement item slim statuslist">
+                            <div class="statusbar warning">
+                                <p>Your O<sup>2</sup> levels are a little low</p>
+                                <span class="start"></span> <span class="end"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid info">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>Terms &amp; Conditions of use</p>
+
+                                <p>Activ8rlives and Activ8rlives.com are trade marks of Aseptika Ltd. All rights
+                                    reserved 2015. Company: Aseptika Ltd, 14 Elizabeth Drive, Hartford, Huntingdon,
+                                    Cambridgeshire PE29 1WA. United Kingdom.</p>
+
+                                <p>T: +44 (0) 1480 352 821 E: info@activ8rlives.com Company number: Registration Number:
+                                    GB06425174. VAT Registration: 985 5533 73.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="textpopup" id="popup">
+    <a href="" class="closelink"></a>
+
+    <div class="popupcontent">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Dashboard Help</h3>
+                <h5>Lorem ipsum dolor sit amet</h5>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis deserunt, distinctio esse iste
+                    magnam magni quasi quia quibusdam quo, rerum tempore tenetur vitae? Accusantium assumenda aut eaque
+                    qui ratione!</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis deserunt, distinctio esse iste
+                    magnam magni quasi quia quibusdam quo, rerum tempore tenetur vitae? Accusantium assumenda aut eaque
+                    qui ratione!</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis deserunt, distinctio esse iste
+                    magnam magni quasi quia quibusdam quo, rerum tempore tenetur vitae? Accusantium assumenda aut eaque
+                    qui ratione!</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="configpopup" id="configwidget">
+    <a href="" class="closelink"></a>
+
+    <div class="popupcontent">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Configure widget</h3>
+                <h5>4x2 Daily Questions</h5>
+
+                <ul class="configurelist">
+                    <li><input type="checkbox"/><span>Question 1:</span> Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.
+                    </li>
+                    <li><input type="checkbox"/><span>Question 2:</span> Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.
+                    </li>
+                    <li><input type="checkbox"/><span>Question 3:</span> Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.
+                    </li>
+                    <li><input type="checkbox"/><span>Question 4:</span> Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.
+                    </li>
+                    <li><input type="checkbox"/><span>Question 5:</span> Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.
+                    </li>
+                    <li><input type="checkbox"/><span>Question 6:</span> Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery.js"></script>
+<!--<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>-->
+<script src="js/jquery-ui.js">
+<script src="js/query.ui.touch-punch.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-submenu.min.js" defer></script>
+
+
+<script src="js/jquery.isotope.js"></script>
+<script src="js/isotope.center.js"></script>
+
+<script src="js/canvasmask.js"></script>
+<script src="js/jquery.popupoverlay.js"></script>
+<script src="http://packery.metafizzy.co/packery.pkgd.js"></script>
+<script src="http://draggabilly.desandro.com/draggabilly.pkgd.js"></script>
+<script src="js/flot/jquery.flot.min.js"></script>
+<script src="js/flot/jquery.flot.bar.order.min.js"></script>
+<script src="js/flot/jquery.flot.pie.min.js"></script>
+<script src="js/flot/jquery.flot.resize.min.js"></script>
+<script src="js/script_sct.js"></script>
+<script src="js/script.js"></script>
+
+
+<script>
+
+    $(function () {
+        $("#slider").slider({
+            value: 50,
+            min: 0,
+            max: 100,
+            step: 10,
+            slide: function (event, ui) {
+            }
+        });
+
+        var d1 = [[0, 300], [1, 300], [2, 500], [3, 700], [4, 800], [5, 1000], [6, 1100], [7, 800]];
+
+//    $.plot($("#healthChart"), [
+//        {
+//            data: d1,
+//            bars: {
+//                show: true
+//            }
+//        }
+//    ]);
+
+
+        var ticks = [[0, 'M'], [1, 'T'], [2, 'W'], [3, 'T'], [4, 'F'], [5, 'S'], [6, 'S'], [7, 'M']];
+
+        $.plot($("#healthChart"), [{
+            label: "Steps",
+            data: d1,
+            color: "#3a8ce5"
+        }], {
+            xaxis: {
+                ticks: [[0, 'M'], [1, 'T'], [2, 'W'], [3, 'T'], [4, 'F'], [5, 'S'], [6, 'S'], [7, 'M']],
+                tickLength: 0
+            },
+            yaxis: {
+                ticks: [],
+                tickLength: 0
+            },
+            series: {
+                points: {
+                    show: false
+                },
+                bars: {
+                    show: true
+                }
+            },
+            grid: {borderWidth: 0, hoverable: true},
+            legend: {
+                show: false
+            },
+            bars: {
+                align: "center",
+                barWidth: 0.5
+            }
+        });
+
+        $("#healthChart").bind("plothover", function (event, pos, item) {
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+                    previousPoint = item.dataIndex;
+
+                    $("#tooltip").remove();
+                    var y = item.datapoint[1].toFixed();
+
+                    showTooltip(item.pageX, item.pageY,
+                            item.series.label + " = " + y);
+                }
+            }
+            else {
+                $("#tooltip").remove();
+                previousPoint = null;
+            }
+        });
+
+        function showTooltip(x, y, contents) {
+            $('<div id="tooltip" class="flot-tooltip tooltip"><div class="tooltip-arrow"></div>' + contents + '</div>').css({
+                top: y - 43,
+                left: x - 15,
+            }).appendTo("body").fadeIn(200);
+			
+			$('.dropdown-submenu > a').submenupicker();
+        }
+
+
+    });
+</script>
+	<script src="js/jquery.popupoverlay.js"></script>
+        <script type="text/javascript" src="js/chart_sct.js"></script>
+	<script src="js/script_sct.js"></script>
+<script>
+
+</script>
+<div class="newspopup popups" id="popup">
+		<a href="" class="closelink"></a>
+		<div class="popupcontent">
+			<article id="news">
+				<label class="popup-label margintop50px">National Early
+					Warning Score (NEWS)</label>
+				<p>
+					<strong>Standardising the assessment of acute-illness
+						severity in the NHS</strong>
+				</p>
+				<section>
+					<p>
+						The NEWS, like many existing EWS systems, is based on a simple
+						scoring system in which a score is allocated to physiological
+						measurements already undertaken when patients present to, or are
+						being monitored in hospital. <br>Six simple physiological
+						parameters form the basis of the scoring system:
+					</p>
+					<ol class="lower_roman_list">
+						<li>Respiratory rate</li>
+						<li>Oxygen saturations</li>
+						<li>Temperature</li>
+						<li>Systolic blood pressure</li>
+						<li>Pulse rate</li>
+						<li>Level of consciousness</li>
+					</ol>
+					<p>A score is allocated to each as they are measured, the
+						magnitude of the score reflecting how extreme the parameter varies
+						from the norm. The score is then aggregated. The score is uplifted
+						for people requiring oxygen. It is important to emphasise that
+						these parameters are already routinely measured in hospitals and
+						recorded on the clinical chart.</p>
+				</section>
+				<section id="news_table">
+					<table id="header_table">
+						<thead>
+							<tr>
+								<th>Physiological Parameters</th>
+								<th>3</th>
+								<th>2</th>
+								<th>1</th>
+								<th>0</th>
+								<th>1</th>
+								<th>2</th>
+								<th>3</th>
+							</tr>
+						</thead>
+					</table>
+					<table id="news_data_table">
+						<tbody>
+							<tr>
+								<td>Respiration Rate</td>
+								<td>&le;8</td>
+								<td></td>
+								<td>9-11</td>
+								<td>12-20</td>
+								<td></td>
+								<td>21-24</td>
+								<td>&ge;25</td>
+							</tr>
+							<tr>
+								<td>Oxygen Saturations</td>
+								<td>&le;91</td>
+								<td>92-93</td>
+								<td>94-95</td>
+								<td>&ge;96</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Any Supplemental Oxygen</td>
+								<td></td>
+								<td>Yes</td>
+								<td></td>
+								<td>No</td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Temperature</td>
+								<td>&le;35</td>
+								<td></td>
+								<td>35.1-36.0</td>
+								<td>36.1-38.0</td>
+								<td>38.1-39.0</td>
+								<td>&ge;39.1</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Systolic Blood Pressure</td>
+								<td>&le;90</td>
+								<td>19-100</td>
+								<td>101-110</td>
+								<td>111-219</td>
+								<td></td>
+								<td></td>
+								<td>&ge;220</td>
+							</tr>
+							<tr>
+								<td>Heart Rate</td>
+								<td>&le;40</td>
+								<td></td>
+								<td>41-50</td>
+								<td>51-90</td>
+								<td>91-110</td>
+								<td>111-130</td>
+								<td>&ge;131</td>
+							</tr>
+							<tr>
+								<td>Level Of Consciousness</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>A</td>
+								<td></td>
+								<td></td>
+								<td>V, P or U</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</article>
+
+			<article id="news_threshold">
+				<label class="popup-label margintop50px">NEWS Thresholds and
+					triggers</label>
+				<section>
+					<table id="header_table">
+						<thead>
+							<tr>
+								<th>NEWS Scores</th>
+								<th>Clinical Risk</th>
+							</tr>
+						</thead>
+					</table>
+					<table id="data_table">
+						<tbody>
+							<tr>
+								<td>
+									<div class="newsthreshold_subdiv">0</div>
+									<div class="newsthreshold_subdiv col_green">Aggregate 1 -
+										4</div>
+								</td>
+								<td class="col_green">Low</td>
+							</tr>
+							<tr class="col_yellow">
+								<td><span class="font_color_ff0000">RED Score*<br>
+									<small>(Individual parameter scoring 3)</small></span><br>Aggregate
+									5 - 6</td>
+								<td>Medium</td>
+							</tr>
+							<tr class="col_pink">
+								<td>Aggregate 7 or more</td>
+								<td>High</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section class="margintop50px">
+					<p>
+						<strong>The NEWS trigger system aligned to the scale of
+							clinical risk</strong>
+					</p>
+					<p>
+						*<span class="font_color_ff0000" style="font-weight: 700">RED
+							score </span>refers to an extreme variation in a single physiological
+						parameter (ie a score of 3 on the NEWS chart, coloured RED to aid
+						identification and represents an extreme variation in a single
+						physiological parameter). The consensus of the NEWS Development
+						and Implementation Group (NEWSDIG) was that extreme values in one
+						physiological parameter (eg heart rate ≤40 beats per minute, or a
+						respiratory rate of ≤8 per minute or a temperature of ≤35°C) could
+						not be ignored and on its own required urgent clinical evaluation.
+					</p>
+					<p>Reproducing this chart: please note that this chart must be
+						reproduced in colour, and should not be modified or amended.</p>
+					<p>The NEWS initiative: the NEWS initiative flowed from the
+						Royal College of Physicians’ NEWSDIG report, and was jointly
+						developed and funded in collaboration with the Royal College of
+						Physicians, Royal College of Nursing, National Outreach Forum and
+						NHS Training for Innovation.</p>
+					<p>© Royal College of Physicians 2012</p>
+				</section>
+			</article>
+		</div>
+	</div>
+</body>
+</html>

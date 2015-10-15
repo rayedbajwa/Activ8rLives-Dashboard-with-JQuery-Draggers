@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <meta name="format-detection" content="telephone=no">
+      <title>ACTIV8RLIVES!</title>
+      <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/sb-admin.css" rel="stylesheet">
+      <link href="css/styles.css" rel="stylesheet">
+      <link href="css/styles_sct.css" rel="stylesheet">
+      <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body> 	  
+
+	 <div>
+		<a class="earlywarning" href="#">
+			<span>View your</span>
+			National Early<br>
+			Warning Score<br>
+			<small>(NEWS)</small>
+		</a>
+	 </div>
+	  
+      <div class="newspopup popups" id="popup">
+         <a href="" class="closelink"></a>
+         <div class="popupcontent">
+          <article id="news">
+            <label class="popup-label margintop50px">National Early Warning Score (NEWS)</label>
+            <p>
+            	 <strong>Standardising the assessment of acute-illness severity in the NHS</strong>
+            </p>
+            <section>
+            <p>
+            	The NEWS, like many existing EWS systems, is based on a simple scoring system in which a score is allocated to
+				physiological measurements already undertaken when patients present to, or are being monitored in hospital.
+				<br>Six simple physiological parameters form the basis of the scoring system:
+             </p>
+             <ol class="lower_roman_list">
+             	<li>Respiratory rate</li>
+             	<li>Oxygen saturations</li>
+             	<li>Temperature</li>
+             	<li>Systolic blood pressure</li>
+             	<li>Pulse rate</li>
+             	<li>Level of consciousness</li>
+            </ol>
+            <p>
+            	A score is allocated to each as they are measured, the magnitude of the score reflecting how extreme the parameter
+				varies from the norm. The score is then aggregated. The score is uplifted for people requiring oxygen. It is important
+				to emphasise that these parameters are already routinely measured in hospitals and recorded on the clinical chart.
+            </p>
+            </section>
+            <section id="news_table">
+            	<table id="header_table">
+            		<thead>
+						<tr>
+							<th>Physiological Parameters</th>
+							<th>3</th>
+							<th>2</th>
+							<th>1</th>
+							<th>0</th>
+							<th>1</th>
+							<th>2</th>
+							<th>3</th>
+						</tr>
+				    </thead>
+            	</table>
+            	<table id="news_data_table">
+					<tbody>
+						<tr>
+							<td>Respiration Rate</td>
+							<td>&le;8</td>
+							<td></td>
+							<td>9-11</td>
+							<td>12-20</td>
+							<td></td>
+							<td>21-24</td>
+							<td>&ge;25</td>
+						</tr>   
+						<tr>
+							<td>Oxygen Saturations</td>
+							<td>&le;91</td>
+							<td>92-93</td>
+							<td>94-95</td>
+							<td>&ge;96</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Any Supplemental Oxygen</td>
+							<td></td>
+							<td>Yes</td>
+							<td></td>
+							<td>No</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Temperature</td>
+							<td>&le;35</td>
+							<td></td>
+							<td>35.1-36.0</td>
+							<td>36.1-38.0</td>
+							<td>38.1-39.0</td>
+							<td>&ge;39.1</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Systolic Blood Pressure</td>
+							<td>&le;90</td>
+							<td>19-100</td>
+							<td>101-110</td>
+							<td>111-219</td>
+							<td></td>
+							<td></td>
+							<td>&ge;220</td>
+						</tr>
+						<tr>
+							<td>Heart Rate</td>
+							<td>&le;40</td>
+							<td></td>
+							<td>41-50</td>
+							<td>51-90</td>
+							<td>91-110</td>
+							<td>111-130</td>
+							<td>&ge;131</td>
+						</tr>
+						<tr>
+							<td>Level Of Consciousness</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>A</td>
+							<td></td>
+							<td></td>
+							<td>V, P or U</td>
+						</tr>	
+					</tbody>
+				</table>
+            </section>
+          </article>  
+          
+          <article id="news_threshold">
+            <label class="popup-label margintop50px">NEWS Thresholds and triggers</label>
+            <section>
+            	<table id="header_table">
+            		<thead>
+						<tr>
+							<th>NEWS Scores</th>
+							<th>Clinical Risk</th>
+						</tr>
+				    </thead>
+            	</table>
+            	<table id="data_table">
+					<tbody>
+						<tr>
+							<td>
+								<div class="newsthreshold_subdiv">0</div>
+								<div class="newsthreshold_subdiv col_green">Aggregate 1 - 4</div>
+							</td>
+							<td class="col_green">Low</td>
+						</tr>   
+						<tr class="col_yellow">
+							<td>
+							<span class="font_color_ff0000">RED Score*<br><small>(Individual parameter scoring 3)</small></span><br>Aggregate 5 - 6
+							</td>
+							<td>Medium</td>
+						</tr>
+						<tr class="col_pink">
+							<td>Aggregate 7 or more</td>
+							<td>High</td>
+						</tr>
+					</tbody>
+				</table>
+            </section>
+            <section class="margintop50px">
+            <p>
+            	 <strong>The NEWS trigger system aligned to the scale of clinical risk</strong>
+            </p>
+            <p>
+            	*<span class="font_color_ff0000" style="font-weight: 700">RED score </span>refers to an extreme variation in a single physiological parameter (ie a score of 3 on the NEWS chart, 
+				 coloured RED to aid identification and represents an extreme variation in a single physiological parameter). 
+				 The consensus of the NEWS Development and Implementation Group (NEWSDIG) was that extreme values in one 
+				 physiological parameter (eg heart rate ≤40 beats per minute, or a respiratory rate of ≤8 per minute or a 
+				 temperature of ≤35°C) could not be ignored and on its own required urgent clinical evaluation. 
+            </p>
+            <p>
+            	Reproducing this chart: please note that this chart must be reproduced in colour, and should not be modified or
+				amended.
+            </p>
+            <p>
+            	The NEWS initiative: the NEWS initiative flowed from the Royal College of Physicians’ NEWSDIG report, and was
+				jointly developed and funded in collaboration with the Royal College of Physicians, Royal College of Nursing,
+				National Outreach Forum and NHS Training for Innovation.
+            </p>
+            <p>© Royal College of Physicians 2012</p>
+            </section>
+          </article>  
+         </div>
+      </div>
+      <script src="js/jquery.js"></script> 
+      <script src="js/bootstrap.min.js"></script> 
+      <script src="js/jquery.popupoverlay.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/script_sct.js"></script>
+   </body>
+</html>
+
